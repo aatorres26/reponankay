@@ -1,52 +1,267 @@
-!<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Formulario para excursion</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nankay</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        :root {
+            --nk-arcilla: #8a4b2d;
+            --nk-crema: #faf6f0;
+            --nk-salvia: #dfe6d8;
+            --nk-cera: #f3e3c3;
+            --nk-tinta: #2b2420;
+        }
+
+        body {
+            background-color: var(--nk-crema);
+            color: var(--nk-tinta);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        /* Sección 1: encabezado */
+        .encabezado {
+            background-color: #fff;
+            border-bottom: 4px solid var(--nk-arcilla);
+        }
+
+        .encabezado h1 {
+            color: var(--nk-arcilla);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .encabezado .lema {
+            font-style: italic;
+            color: #6b5d54;
+        }
+
+        /* Secciones de producto */
+        .seccion-macetas { background-color: var(--nk-salvia); }
+        .seccion-velas   { background-color: var(--nk-cera); }
+
+        .producto h2 {
+            color: var(--nk-arcilla);
+            font-weight: 700;
+        }
+
+        .producto img {
+            box-shadow: 0 8px 24px rgba(43, 36, 32, 0.18);
+        }
+
+        /* Servicios, mapa y formulario */
+        .producto h3 {
+            color: var(--nk-arcilla);
+            font-weight: 700;
+        }
+
+        .btn-nankay {
+            background-color: var(--nk-arcilla);
+            border-color: var(--nk-arcilla);
+            color: #fff;
+        }
+
+        .btn-nankay:hover,
+        .btn-nankay:focus {
+            background-color: #6f3b22;
+            border-color: #6f3b22;
+            color: #fff;
+        }
+
+        footer {
+            background-color: var(--nk-tinta);
+            color: var(--nk-crema);
+        }
+
+        footer a {
+            color: var(--nk-crema);
+        }
+    </style>
 </head>
-<body >
-    <div class="container">
-        <!--seccion encavezado-->
-        <div class="row m-4">
-            <div class="col-4">
-                <img src="img/nankayimg.jpg" alt="logo" class="img-fluid rounded">
-            </div>
-            
-            <div
-                class="col-8 ">
-                    <h1 class="text=center display-1">
-                        Nankay
-                    </h1>
-                    <h3 class="text-center display-6">
-                        tu imaginas nosotros lo creamos
-                    </h3>
+
+<body>
+
+    <!-- SECCIÓN 1: ENCABEZADO (logo, nombre y lema) -->
+    <header class="encabezado py-4">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-4 text-center ">
+                      <img src="img/nankayimg.jpg" alt="titular" class="img-fluid rounded">
+                </div>
+                <div class=" col-8 text-center">
+                    <h1 class="display-1">Nankay</h1>
+                    <p class="lema display-6 mb-0">Tú imaginas, nosotros lo creamos</p>
+                </div>
             </div>
         </div>
-        <!-- seccion baner-->
-        <div class="row bg-light" >
-            <div class="col">
-                <img src="img/baner.png" alt="baner" class="img-fluid rounded">
-            </div>
-            <div class="row m-4">
-                <div class="col-8">
-                    <p>
-                         regala reuerdos llenos de vida y luz 
-                        Macetitas con plantitas y velas,
-                        detalles unicos para sorprender y crear momentos especiales
-                    </p>
+    </header>
+
+    <!-- BANNER -->
+    <section class="bg-light">
+        <div class="container py-4">
+            <img src="img/baner.png" alt="Banner de Nankay" class="img-fluid rounded w-100">
+        </div>
+    </section>
+    <h2 class="display-4">Nuestros Productos</h2>
+    <!-- SECCIÓN 2: MACETAS DECORATIVAS  -->
+    <section class="seccion-macetas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                <div class=" col-4 text-center text-md-start">
+                    <img src="img/nankayimg2.jpg" alt="Macetas decorativas" class="img-fluid rounded">
                 </div>
-
-                 <div class="col-4 ">
-                        <img src="img/nankay1.jpg" alt="img1" class="img-fluid rounded">
+                <div class="col-8 text-center">
+                    <h2 class="display-4">Macetas decorativas</h2>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: VELAS ARTESANALES  -->
+    <section class="seccion-velas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                 <div class="col-8 text-center">
+                    <h2 class="display-4">Velas Artesanales</h2>
+                </div>
+                 <div class=" col-4 text-center text-md-start">
+                    <img src="img/nankay1.jpg" alt="Macetas decorativas" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN 4: Recuerdos de boda y cumpleaños -->
+    <section class="seccion-macetas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                <div class=" col-4 text-center text-md-start">
+                    <img src="img/img3.jpg" alt="Macetas decorativas" class="img-fluid rounded">
+                </div>
+                <div class="col-8 text-center">
+                    <h2 class="display-4">Recuerdos de bodas y cumpleaños</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: DETALLES CORPORATIVOS  -->
+    <section class="seccion-velas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                 <div class="col-8 text-center">
+                    <h2 class="display-4">Detalles Corporativos</h2>
+                </div>
+                 <div class=" col-4 text-center text-md-start">
+                    <img src="img/img4.jpg" alt="Macetas decorativas" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN 6: Minijardines  -->
+    <section class="seccion-macetas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                <div class=" col-4 text-center text-md-start">
+                    <img src="img/img5.jpg" alt="Macetas decorativas" class="img-fluid rounded">
+                </div>
+                <div class="col-8 text-center">
+                    <h2 class="display-4">Minijardines</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: LISTA DE SERVICIOS -->
+    <section class="seccion-velas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                <div class="col text-center">
+                    <h2 class="display-4">Servicios</h2>
+
+                    <!-- Escribe aquí tus servicios: un <li> por cada uno -->
+                    <ul class="fs-4 mb-0">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
 
             </div>
-    
-    
+        </div>
+    </section>
 
+    <!-- SECCIÓN 8: UBICACIÓN (GOOGLE MAPS) -->
+    <section class="seccion-macetas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                <div class="col-4 text-center">
+                    <h3 class="display-6">Dónde estamos</h3>
+                    <p class="fs-5 mb-0">Puedes encontrarnos aqui!</p>
+                </div>
+                <div class="col-8 ">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3177719442842!2d-78.59667092432845!3d-0.9075877990836345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d461bd1d43a1bb%3A0x2e0b77284ded7ca6!2sNankay%20-%20Arte%20en%20cemento!5e0!3m2!1ses-419!2sec!4v1792683302689!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECCIÓN 9: FORMULARIO -->
+    <section class="seccion-velas py-5">
+        <div class="container producto">
+            <div class="row align-items-center g-4">
+                <div class="col text-center">
+                    <h2 class="display-4">Contáctanos</h2>
+                </div>
+                
+                    <form action="#" method="post">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="direccion" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccion" name="direccion" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="cedula" class="form-label">Cédula</label>
+                                <input type="text" class="form-control" id="cedula" name="cedula" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" title="La cédula debe tener 10 dígitos" required>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-nankay btn-lg">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA: REDES SOCIALES -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-4 text-center">
+                    <small>&copy; Nankay</small>
+                </div>
+                <div class="col-8 text-center">
+                    <!-- Reemplaza cada # por la dirección de tu red social -->
+                    <a href="https://www.facebook.com/nankayec/?locale=es_LA" class="me-3">Facebook</a>
+                    <a href="https://www.instagram.com/nankayec/" class="me-3">Instagram</a>
+                    <a href="https://www.tiktok.com/@nankayec" class="me-3">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
